@@ -29,6 +29,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div id="root2"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +40,20 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    test
+    <script>
+      window.onload=()=>{
+        console.log("test");
+        const user_info = {
+          name:"MR. Taro",
+          url: "http://127.0.0.1:8000/home",
+          icon: "https://placehold.jp/3d4070/ffffff/150x150.png?text=taro"
+        }
+        window.renderProfileApp("root", user_info);
+        window.renderProfileApp("root2", "http://localhost:3001/content/user_test01.json");
+      }
+      
+    </script>
+    
   </body>
 </html>
