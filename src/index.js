@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import App2 from './App2';
+import CountApp from './CountApp';
+import Chat from './Chat';
+import UpdateProfile from './UpdateProfile'
 //import reportWebVitals from './reportWebVitals';
 
 // ReactDOM.render(
@@ -27,9 +30,42 @@ window.renderProfileApp = (element_id, user_info) =>{
 )};
 
 window.renderProfileApp2 = (element_id,url) =>{
+  
   ReactDOM.render(
   <React.StrictMode>
-    <App user={url}/>
+    <App2 url={url}/>
   </React.StrictMode>,
   document.getElementById(element_id)
 )};
+
+window.countRoop = (element_id) =>{
+  ReactDOM.render(
+  <React.StrictMode>
+    <CountApp />
+  </React.StrictMode>,
+  document.getElementById(element_id)
+  )
+};
+
+window.chat = (element_id,endpoints) =>{
+  
+  ReactDOM.render(
+  <React.StrictMode>
+    <Chat endpoints={endpoints}/>
+  </React.StrictMode>,
+  document.getElementById(element_id)
+)};
+
+window.renderUpdateProfile = (element_id,endpoints) =>{
+  ReactDOM.render(
+    <React.StrictMode>
+      <UpdateProfile endpoints={endpoints} />
+    </React.StrictMode>,
+    document.getElementById(element_id)
+  )
+};
+
+export const PROFILE_ENDPOINTS = {
+  update : null,
+  load : null
+}

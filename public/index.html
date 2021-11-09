@@ -29,7 +29,10 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <hr>
     <div id="root2"></div>
+
+    <div id="root3"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -40,7 +43,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    test
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
       window.onload=()=>{
         console.log("test");
@@ -49,8 +52,9 @@
           url: "http://127.0.0.1:8000/home",
           icon: "https://placehold.jp/3d4070/ffffff/150x150.png?text=taro"
         }
-        window.renderProfileApp("root", user_info);
-        window.renderProfileApp("root2", "http://localhost:3001/content/user_test01.json");
+     window.renderProfileApp("root", user_info);
+        window.renderProfileApp2("root2", "http://localhost:3001/content/user_test01.json");
+        // window.countRoop("root3");
       }
       
     </script>
