@@ -6,12 +6,16 @@ function App(props) {
   const user = props.user
 
   return (
-    <div className="user-profile">
+    <div className="row">
+      <div class="col-md-6 col-xl-3">
+      <div className="user-profile">
       <a href={user.url}>
         <img src={user.icon} alt="test"/>
-        <h2>{user.name}</h2>
       </a>
     </div>
+      </div>
+    </div>
+    
   );
 }
 
