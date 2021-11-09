@@ -69,3 +69,17 @@ export const PROFILE_ENDPOINTS = {
   update : null,
   load : null
 }
+
+window.renderChat = (element_id, endpoints) => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <Chat endpoints = { endpoints } />
+    </React.StrictMode>,
+    document.getElementById(element_id)
+  )
+}
+
+export const CHAT_ENDPOINTS = {
+  update : null,
+  load : null
+}

@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 export default function UpdateProfile(props) {
 
   const endpoints = props.endpoints;
-  console.log("endpoints", endpoints);
   const [item, setItem] = useState({
     user: {},
     chat_user: {}
@@ -62,7 +61,7 @@ export default function UpdateProfile(props) {
   //フォームから入力
 
   useEffect(() => {
-    
+
     fetch(endpoints.load)
       .then(res => res.json())
       .then((result) => {
