@@ -28,26 +28,25 @@ function App2(props) {
     return <div className="user-profile">loading</div>
   }
  
-  const get_profile_url = () =>{
-    console.log("user.result2",user.result.user);
-    return "/u/" + user.result.user.id
-  };
+  // const get_profile_url = () =>{
+  //   console.log("user.result2",user.result.user);
+  //   return "/u/" + user.result.user.id
+  // };
+  // <div ><a href={get_profile_url()}>氏名：{user.result.user.id} {user.result.user.name}</a></div>          
+            
   const weightStyle={
     height:'150px'
   }
   return (
     
-    <div className="row">
-      <div class="col-md-12 col-xl-3">
           <div className="card p-3" style={weightStyle}　>
-            <div ><a href={get_profile_url()}>氏名：{user.result.user.id} {user.result.user.name}</a></div>          
-            <br></br>
-            <div >ニックネーム：{user.result.user.name}</div>
-            <br></br>
+            <div >ID：{user.result.user.id}</div> 
+            <div >氏名：{user.result.user.name}</div>          
+            
+            <div >ニックネーム：{user.result.chat_user.nickname}</div>
+            
             <div>E-mail：{user.result.user.email}</div>
           </div>
-        </div>
-    </div>
   );
 }
 
